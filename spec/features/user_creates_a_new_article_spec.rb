@@ -8,8 +8,8 @@ describe "user creates a new article" do
 
         expect(current_path).to eq(new_article_path)
 
-        fill_in "asrticle[title]", with: "New Title!"
-        fill_in "asrticle[title]", with: "New Body!"
+        fill_in "article[title]", with: "New Title!"
+        fill_in "article[title]", with: "New Body!"
         click_on "Create Article"
 
         expect(page).to have_content("New Title!")
