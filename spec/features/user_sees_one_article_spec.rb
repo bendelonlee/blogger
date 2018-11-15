@@ -30,6 +30,9 @@ describe "user sees one article" do
 
       visit article_path(article)
 
+      expect(page).to have_content("Your Name")
+      expect(page).to have_content("Your Comment")
+
       fill_in "comment[author_name]", with: "ME!"
       fill_in "comment[body]", with: "So many thoughts on this article."
       click_on "Submit"
