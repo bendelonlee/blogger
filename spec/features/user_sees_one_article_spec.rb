@@ -27,7 +27,7 @@ describe "user sees one article" do
     it "displays the comment on the article show" do
       article = Article.create!(title: "New Title", body: "New Body")
 
-      vist article_path(article)
+      visit article_path(article)
 
       fill_in "comment[author_name]", with: "ME!"
       fill_in "comment[body]", with: "So many thoughts on this article."
