@@ -10,7 +10,7 @@ describe "user deletes an article" do
 
       expect(current_path).to eq(tags_path)
       expect(page).to have_content(tag_2.name)
-      expect(page).to have_content("tag 'name 1' was deleted.")
+      expect(page).to have_content("Tag 'name 1' was deleted.")
       visit tags_path
       expect(page).to_not have_content(tag_1.name)
 
