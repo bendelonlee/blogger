@@ -13,6 +13,9 @@ describe "user sees one tag" do
       expect(page).to have_content("name")
       expect(page).to have_content("New Title")
       expect(page).to have_content("Newer Title")
+
+      click_link("New Title")
+      expect(current_path).to eq(article_path(article_1))
     end
   end
 end
