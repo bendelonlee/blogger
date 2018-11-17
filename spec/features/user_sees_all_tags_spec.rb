@@ -7,8 +7,8 @@ describe "user sees all articles" do
 
       visit '/tags'
 
-      expect(page).to have_link(tag_1.title)
-      expect(page).to have_link(tag_2.title)
+      expect(page).to have_link(tag_1.name)
+      expect(page).to have_link(tag_2.name)
     end
   end
 end
